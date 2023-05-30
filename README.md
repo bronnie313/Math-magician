@@ -48,7 +48,6 @@ After you're finished please remove all the comments and instructions!
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -216,4 +215,4 @@ I would like to thank every one of you for the constant hard work and dedication
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]((https://github.com/bronnie313/Math-magician/blob/main/LICENSE)) licensed.
+This project is [MIT](https://github.com/bronnie313/Math-magician/blob/main/LICENSE) licensed.
