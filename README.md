@@ -216,4 +216,4 @@ I would like to thank every one of you for the constant hard work and dedication
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](LICENSE) licensed.
+This project is [MIT]([LICENSE](https://github.com/bronnie313/Math-magician/blob/main/LICENSE)) licensed.
