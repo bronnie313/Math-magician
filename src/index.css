@@ -12,9 +12,10 @@ table {
 
 th,
 td {
-  border: 1px solid lightgray;
+  border: 1px solid hsla(260, 11%, 95%, 1);
   padding: 8px;
   text-align: center;
+  background: hsla(240, 7%, 97%, 1);
 }
 
 section {
@@ -28,4 +29,8 @@ section {
   border: none;
   color: white;
   background: hsl(230deg 8.57% 86.27%);
+}
+
+.last {
+  background-color: hsl(27.21deg 90.15% 60.2%);
 }
