@@ -4,33 +4,33 @@
   box-sizing: border-box;
 }
 
-table {
-  border: 1px solid lightgray;
-  width: 50%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid hsla(260, 11%, 95%, 1);
-  padding: 8px;
-  text-align: center;
-  background: hsla(240, 7%, 97%, 1);
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 section {
+  width: 50%;
   margin: 3rem;
 }
 
-.result {
-  display: flex;
-  flex-flow: row-reverse;
-  width: 337%;
-  border: none;
-  color: white;
-  background: hsl(230deg 8.57% 86.27%);
+.keys input {
+  border: 0.5px solid hsl(210deg 12.5% 96.86%);
+  padding: 14px;
 }
 
-.last {
+.lastColumn {
   background-color: hsl(27.21deg 90.15% 60.2%);
+}
+
+.screen {
+  display: flex;
+  flex-flow: row-reverse;
+  color: white;
+  padding: 5px;
+  background: hsl(236deg 6.55% 55.1%);
+}
+
+.zero {
+  grid-column: span 2;
 }
