@@ -30,7 +30,7 @@ const Cal = () => (
         <td>+</td>
       </tr>
       <tr>
-        <td className="zero" colSpan="2">0</td>
+        <td className="zero" colSpan={2}>0</td>
         <td>.</td>
         <td>=</td>
       </tr>

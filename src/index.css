@@ -5,13 +5,14 @@
 }
 
 table {
-  border: 1px solid;
+  border: 1px solid lightgray;
   width: 50%;
   border-collapse: collapse;
 }
 
-th, td {
-  border: 1px solid black;
+th,
+td {
+  border: 1px solid lightgray;
   padding: 8px;
   text-align: center;
 }
@@ -22,13 +23,9 @@ section {
 
 .result {
   display: flex;
-    flex-flow: row-reverse;
-    width: 337%;
-    border: none;
-}
-
-.zero {
-  display: flex;
   flex-flow: row-reverse;
+  width: 337%;
   border: none;
-} 
+  color: white;
+  background: hsl(230deg 8.57% 86.27%);
+}
