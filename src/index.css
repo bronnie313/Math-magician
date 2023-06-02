@@ -10,13 +10,14 @@
 }
 
 section {
-  width: 50%;
+  width: 40%;
   margin: 3rem;
 }
 
 .keys input {
   border: 0.5px solid hsl(210deg 12.5% 96.86%);
   padding: 14px;
+  height: 40px;
 }
 
 .lastColumn {

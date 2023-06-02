@@ -1,38 +1,91 @@
-const Cal = () => (
-  <section>
-    <CalculatorScreen />
-    <CalcBtns />
-  </section>
-);
+import { useState } from 'react';
+import PropTypes, { number } from 'prop-types';
+import calculate from './logic/calculate';
 
-const CalculatorScreen = () => (
+const Cal = () => {
+  const [calculatorData, setCalculatorData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const allClear = (buttonName) => {
+    setCalculatorData(calculate(calculatorData, buttonName));
+  };
+
+  const toggleSign = (buttonName) => {
+    setCalculatorData(calculate(calculatorData, buttonName));
+  };
+
+  const numberClick = (buttonName) => {
+    setCalculatorData(calculate(calculatorData, buttonName));
+  };
+
+  const operatorClick = (buttonName) => {
+    setCalculatorData(calculate(calculatorData, buttonName));
+  };
+
+  const equalClick = (buttonName) => {
+    setCalculatorData(calculate(calculatorData, buttonName));
+  };
+
+  return (
+    <section>
+      <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
+      <CalcBtns
+        handleClearClick={allClear}
+        handleToggleSign={toggleSign}
+        handleNumberClick={numberClick}
+        handleOperatorClick={operatorClick}
+        handleEqualClick={equalClick}
+      />
+    </section>
+  );
+};
+
+const CalculatorScreen = ({ value }) => (
   <div className="screen">
-    <h2>0</h2>
+    <h2>{value}</h2>
   </div>
 );
 
-const CalcBtns = () => (
+CalculatorScreen.propTypes = {
+  value: number.isRequired,
+};
+
+const CalcBtns = ({
+  handleClearClick, handleToggleSign, handleNumberClick, handleOperatorClick, handleEqualClick,
+}) => (
+
   <article className="keys">
-    <input type="button" value="AC" />
-    <input type="button" value="+/-" />
-    <input type="button" value="%" />
-    <input className="lastColumn" type="button" value="÷" />
-    <input type="button" value="7" />
-    <input type="button" value="8" />
-    <input type="button" value="9" />
-    <input className="lastColumn" type="button" value="x" />
-    <input type="button" value="4" />
-    <input type="button" value="5" />
-    <input type="button" value="6" />
-    <input className="lastColumn" type="button" value="-" />
-    <input type="button" value="1" />
-    <input type="button" value="2" />
-    <input type="button" value="3" />
-    <input className="lastColumn" type="button" value="+" />
-    <input className="zero" type="button" value="0" />
-    <input type="button" value="." />
-    <input className="lastColumn" type="button" value="=" />
+    <input onClick={() => handleClearClick('AC')} type="button" value="AC" />
+    <input onClick={() => handleToggleSign('+/-')} type="button" value="+/-" />
+    <input onClick={() => handleOperatorClick('%')} type="button" value="%" />
+    <input onClick={() => handleOperatorClick('÷')} className="lastColumn" type="button" value="÷" />
+    <input onClick={() => handleNumberClick('7')} type="button" value="7" />
+    <input onClick={() => handleNumberClick('8')} type="button" value="8" />
+    <input onClick={() => handleNumberClick('9')} type="button" value="9" />
+    <input onClick={() => handleOperatorClick('x')} className="lastColumn" type="button" value="x" />
+    <input onClick={() => handleNumberClick('4')} type="button" value="4" />
+    <input onClick={() => handleNumberClick('5')} type="button" value="5" />
+    <input onClick={() => handleNumberClick('6')} type="button" value="6" />
+    <input onClick={() => handleOperatorClick('-')} className="lastColumn" type="button" value="-" />
+    <input onClick={() => handleNumberClick('1')} type="button" value="1" />
+    <input onClick={() => handleNumberClick('2')} type="button" value="2" />
+    <input onClick={() => handleNumberClick('3')} type="button" value="3" />
+    <input onClick={() => handleOperatorClick('+')} className="lastColumn" type="button" value="+" />
+    <input onClick={() => handleNumberClick('0')} className="zero" type="button" value="0" />
+    <input onClick={() => handleNumberClick('.')} type="button" value="." />
+    <input onClick={() => handleEqualClick('=')} className="lastColumn" type="button" value="=" />
   </article>
 );
+
+CalcBtns.propTypes = {
+  handleClearClick: PropTypes.func.isRequired,
+  handleToggleSign: PropTypes.func.isRequired,
+  handleNumberClick: PropTypes.func.isRequired,
+  handleOperatorClick: PropTypes.func.isRequired,
+  handleEqualClick: PropTypes.func.isRequired,
+};
 
 export default Cal;
