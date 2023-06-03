@@ -2,7 +2,9 @@ import Cal from './components/Calculator';
 
 function App() {
   return (
-    <Cal />
+    <div>
+      <Cal />
+    </div>
   );
 }
 
