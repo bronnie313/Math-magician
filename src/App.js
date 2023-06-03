@@ -1,8 +1,12 @@
 import Cal from './components/Calculator';
+import Fetch from './quote';
 
 function App() {
   return (
-    <Cal />
+    <div>
+      <Cal />
+      <Fetch />
+    </div>
   );
 }
 
