@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes, { number } from 'prop-types';
 import calculate from './logic/calculate';
+import Fetch from '../quote';
 
 const Cal = () => {
   const [calculatorData, setCalculatorData] = useState({
@@ -39,6 +40,9 @@ const Cal = () => {
         handleOperatorClick={operatorClick}
         handleEqualClick={equalClick}
       />
+      <div>
+        <Fetch />
+      </div>
     </section>
   );
 };
