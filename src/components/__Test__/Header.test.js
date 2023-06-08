@@ -1,10 +1,17 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import Header from '../Header';
 
 describe('Header component', () => {
-  it('component renders correctly', () => {
-    const tree = renderer.create(<Header />);
-    expect(tree).toMatchSnapshot();
+  it('renders the header text', () => {
+    render(<Header />);
+    const headerText = screen.getByText('Math Magicians');
+    expect(headerText).toBeInTheDocument();
+  });
+
+  it('renders the navigation items', () => {
+    render(<Header />);
+    const navItems = screen.getAllByRole('listitem');
+    expect(navItems.length).toBe(3);
   });
 });
