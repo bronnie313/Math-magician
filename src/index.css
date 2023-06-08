@@ -35,3 +35,25 @@ section {
 .zero {
   grid-column: span 2;
 }
+
+.link {
+  font-size: 27px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  align-items: center;
+}
+
+.title {
+  font-size: xxx-large;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
