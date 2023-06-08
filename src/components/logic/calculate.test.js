@@ -1,5 +1,4 @@
 import calculate from './calculate';
-// import operate from "./operate";
 
 describe('calculate', () => {
   it('should returns total null for object when AC is pressed', () => {
