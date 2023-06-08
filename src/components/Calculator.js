@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import PropTypes, { number } from 'prop-types';
 import calculate from './logic/calculate';
-import Fetch from '../quote';
 
 const Cal = () => {
   const [calculatorData, setCalculatorData] = useState({
@@ -31,19 +30,19 @@ const Cal = () => {
   };
 
   return (
-    <section>
-      <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
-      <CalcBtns
-        handleClearClick={allClear}
-        handleToggleSign={toggleSign}
-        handleNumberClick={numberClick}
-        handleOperatorClick={operatorClick}
-        handleEqualClick={equalClick}
-      />
-      <div>
-        <Fetch />
-      </div>
-    </section>
+    <div className="info">
+      <div><h2 className="cal">Let&apos;s do some Math</h2></div>
+      <section>
+        <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
+        <CalcBtns
+          handleClearClick={allClear}
+          handleToggleSign={toggleSign}
+          handleNumberClick={numberClick}
+          handleOperatorClick={operatorClick}
+          handleEqualClick={equalClick}
+        />
+      </section>
+    </div>
   );
 };
 

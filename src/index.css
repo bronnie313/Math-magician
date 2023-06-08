@@ -10,14 +10,13 @@
 }
 
 section {
-  width: 40%;
-  margin: 3rem;
+  width: 55%;
 }
 
 .keys input {
   border: 0.5px solid hsl(210deg 12.5% 96.86%);
   padding: 14px;
-  height: 40px;
+  height: 65px;
 }
 
 .lastColumn {
@@ -34,4 +33,50 @@ section {
 
 .zero {
   grid-column: span 2;
+}
+
+.link {
+  font-size: 27px;
+  color: white;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  align-items: center;
+  color: white;
+  background-color: seagreen;
+}
+
+.title {
+  font-size: xxx-large;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.home {
+  margin: 2em 5em 0;
+}
+
+p {
+  padding: 20px 0;
+  font-size: 22px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 7em;
+}
+
+.cal {
+  font-size: 2em;
+  font-weight: bold;
 }

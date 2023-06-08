@@ -28,7 +28,7 @@ const Fetch = () => {
 
   if (hasError) return <div>Something went wrong!</div>;
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="load">Loading...</div>;
 
   return (
     <ul className="quote">

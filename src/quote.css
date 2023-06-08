@@ -3,4 +3,10 @@
   list-style: none;
   font-size: 24px;
   font-family: cursive;
+  text-align: center;
+}
+
+.load {
+  text-align: center;
+  font-size: 24px;
 }
