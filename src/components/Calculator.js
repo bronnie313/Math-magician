@@ -30,16 +30,19 @@ const Cal = () => {
   };
 
   return (
-    <section>
-      <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
-      <CalcBtns
-        handleClearClick={allClear}
-        handleToggleSign={toggleSign}
-        handleNumberClick={numberClick}
-        handleOperatorClick={operatorClick}
-        handleEqualClick={equalClick}
-      />
-    </section>
+    <div className='info'>
+      <div><h2 className='cal'>Let's do some Math</h2></div>
+      <section>
+        <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
+        <CalcBtns
+          handleClearClick={allClear}
+          handleToggleSign={toggleSign}
+          handleNumberClick={numberClick}
+          handleOperatorClick={operatorClick}
+          handleEqualClick={equalClick}
+        />
+      </section>
+    </div>
   );
 };
 

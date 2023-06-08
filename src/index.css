@@ -10,14 +10,14 @@
 }
 
 section {
-  width: 40%;
+  width: 55%;
   margin: 3rem;
 }
 
 .keys input {
   border: 0.5px solid hsl(210deg 12.5% 96.86%);
   padding: 14px;
-  height: 40px;
+  height: 65px;
 }
 
 .lastColumn {
@@ -66,4 +66,15 @@ ul {
 p {
   padding: 20px 0;
   font-size: 22px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 7em;
+}
+
+.cal {
+  font-size: 2em;
+  font-weight: bold;
 }

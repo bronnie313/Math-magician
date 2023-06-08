@@ -28,13 +28,13 @@ const Fetch = () => {
 
   if (hasError) return <div>Something went wrong!</div>;
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className='load'>Loading...</div>;
 
   return (
     <ul className="quote">
       {quote.map((item) => (
         <li key={item.id}>
-          <q>{item.quote}</q>
+          <q className='item'>{item.quote}</q>
               &nbsp;&nbsp;
           <b>{item.author}</b>
         </li>
