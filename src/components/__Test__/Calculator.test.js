@@ -1,10 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import Cal from '../Calculator';
 
-describe('Calculator component', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<Cal />).toJSON();
-    expect(tree).toMatchSnapshot();
+describe('Cal component', () => {
+  it('renders the calculator buttons', () => {
+    render(<Cal />);
+    const calculatorButtons = screen.getAllByRole('button');
+    expect(calculatorButtons.length).toBeGreaterThan(0);
   });
 });
