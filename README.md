@@ -137,7 +137,7 @@ Example command:
 
 ### Run tests
 
-To run tests, run the following command:` npm run start `
+To run tests, run the following command:` npm run test `
 
 <!--
 Example command:
