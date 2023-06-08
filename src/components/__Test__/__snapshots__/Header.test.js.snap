@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component component renders correctly 1`] = `
+<nav>
+  <div>
+    Math Magicians
+  </div>
+  <ul>
+    <li>
+      Home
+    </li>
+    <li>
+      Calculator
+    </li>
+    <li>
+      Quote
+    </li>
+  </ul>
+</nav>
+`;
