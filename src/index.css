@@ -49,6 +49,7 @@ section {
 
 .title {
   font-size: xxx-large;
+  font-weight: 700;
 }
 
 ul {
@@ -56,4 +57,13 @@ ul {
   display: flex;
   gap: 50px;
   align-items: center;
+}
+
+.home {
+  margin: 2em 5em 0;
+}
+
+p {
+  padding: 20px 0;
+  font-size: 22px;
 }
