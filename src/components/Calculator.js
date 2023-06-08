@@ -30,8 +30,8 @@ const Cal = () => {
   };
 
   return (
-    <div className='info'>
-      <div><h2 className='cal'>Let's do some Math</h2></div>
+    <div className="info">
+      <div><h2 className="cal">Let&apos;s do some Math</h2></div>
       <section>
         <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
         <CalcBtns
