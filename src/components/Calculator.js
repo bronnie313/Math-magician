@@ -29,11 +29,14 @@ const Cal = () => {
     setCalculatorData(calculate(calculatorData, buttonName));
   };
 
+  const nextValue = Number(calculatorData.next);
+  const totalValue = Number(calculatorData.total);
+
   return (
     <div className="info">
       <div><h2 className="cal">Let&apos;s do some Math</h2></div>
       <section>
-        <CalculatorScreen value={calculatorData.next || calculatorData.total || '0'} />
+        <CalculatorScreen value={nextValue || totalValue || 0} />
         <CalcBtns
           handleClearClick={allClear}
           handleToggleSign={toggleSign}
