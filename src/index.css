@@ -11,7 +11,6 @@
 
 section {
   width: 55%;
-  margin: 3rem;
 }
 
 .keys input {
@@ -38,6 +37,7 @@ section {
 
 .link {
   font-size: 27px;
+  color: white;
 }
 
 .heading {
@@ -45,6 +45,8 @@ section {
   justify-content: space-between;
   padding: 2rem 6rem;
   align-items: center;
+  color: white;
+  background-color: seagreen;
 }
 
 .title {
